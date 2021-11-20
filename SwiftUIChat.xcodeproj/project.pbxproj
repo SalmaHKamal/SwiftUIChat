@@ -16,6 +16,7 @@
 		805B34FC2748F05E0063AFEA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 805B34FB2748F05E0063AFEA /* FirebaseAuth */; };
 		805B34FE2748F05E0063AFEA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 805B34FD2748F05E0063AFEA /* FirebaseStorage */; };
 		805B35072748F4830063AFEA /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B35062748F4830063AFEA /* FirebaseManager.swift */; };
+		805B350C2748FD330063AFEA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B350B2748FD330063AFEA /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		805B34F427482DFA0063AFEA /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		805B34F72748EF0E0063AFEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		805B35062748F4830063AFEA /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		805B350B2748FD330063AFEA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		805B34E2274814760063AFEA /* SwiftUIChat */ = {
 			isa = PBXGroup;
 			children = (
+				805B350A2748FD260063AFEA /* Components */,
 				805B35052748F4710063AFEA /* Managers */,
 				805B35002748F0990063AFEA /* Views */,
 				805B34E3274814760063AFEA /* SwiftUIChatApp.swift */,
@@ -96,6 +99,14 @@
 				805B35062748F4830063AFEA /* FirebaseManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		805B350A2748FD260063AFEA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				805B350B2748FD330063AFEA /* ImagePicker.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			files = (
 				805B35072748F4830063AFEA /* FirebaseManager.swift in Sources */,
 				805B34F527482DFA0063AFEA /* FormView.swift in Sources */,
+				805B350C2748FD330063AFEA /* ImagePicker.swift in Sources */,
 				805B34E6274814760063AFEA /* RegisterationView.swift in Sources */,
 				805B34E4274814760063AFEA /* SwiftUIChatApp.swift in Sources */,
 			);

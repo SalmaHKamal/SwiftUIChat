@@ -15,6 +15,8 @@ enum LoginCases: String {
 struct RegisterationView: View {
 	// MARK: - Variables
 	@State var isLoginMode = false
+	@State var shouldShowImagePicker: Bool = false
+	@State var selectedImage: UIImage?
 	private var title: String {
 		return isLoginMode ? LoginCases.login.rawValue : LoginCases.createAccount.rawValue
 	}
@@ -30,13 +32,20 @@ struct RegisterationView: View {
 				.pickerStyle(SegmentedPickerStyle())
 				.padding()
 				
-				FormView(isLoginMode: $isLoginMode)
+				FormView(isLoginMode: $isLoginMode,
+						 selectedImage: $selectedImage,
+						 shouldShowImagePicker: $shouldShowImagePicker)
 			}
 			.navigationTitle(title)
 			.background(Color(white: 0, opacity: 0.05)
 							.ignoresSafeArea())
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
+		.fullScreenCover(isPresented: $shouldShowImagePicker,
+						 onDismiss: nil,
+						 content: {
+			ImagePicker(image: $selectedImage)
+		})
     }
 }
 

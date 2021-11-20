@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct FormView: View {
+	// MARK: - Variables
 	@Binding var isLoginMode: Bool
 	@State private var email = ""
 	@State private var password = ""
 	private var buttonTitle: String {
 		return isLoginMode ? LoginCases.login.rawValue : LoginCases.createAccount.rawValue
 	}
+	@State private var loginResponse = ""
 	
+	// MARK: - Content
 	var body: some View {
 		VStack(spacing: 16) {
 			if !isLoginMode {
@@ -42,6 +45,9 @@ struct FormView: View {
 					Spacer()
 				}.background(Color.blue)
 			})
+			
+			Text(loginResponse)
+				.foregroundColor(.red)
 		}
 		.padding()
 	}
@@ -52,9 +58,13 @@ struct FormView: View {
 	
 	private func actionButtonPressed() {
 		if isLoginMode {
-			print("Login")
+			FirebaseManager.shared.login(with: email, and: password, completion: { message in
+				loginResponse = message
+			})
 		} else {
-			print("create account")
+			FirebaseManager.shared.createAccount(with: email, and: password, completion: { message in
+				loginResponse = message
+			})
 		}
 	}
 }

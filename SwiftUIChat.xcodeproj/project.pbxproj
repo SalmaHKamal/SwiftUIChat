@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,10 @@
 		805B34E8274814770063AFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805B34E7274814770063AFEA /* Assets.xcassets */; };
 		805B34EB274814770063AFEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805B34EA274814770063AFEA /* Preview Assets.xcassets */; };
 		805B34F527482DFA0063AFEA /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B34F427482DFA0063AFEA /* FormView.swift */; };
+		805B34F82748EF0E0063AFEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 805B34F72748EF0E0063AFEA /* GoogleService-Info.plist */; };
+		805B34FC2748F05E0063AFEA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 805B34FB2748F05E0063AFEA /* FirebaseAuth */; };
+		805B34FE2748F05E0063AFEA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 805B34FD2748F05E0063AFEA /* FirebaseStorage */; };
+		805B35072748F4830063AFEA /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B35062748F4830063AFEA /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,8 @@
 		805B34EA274814770063AFEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		805B34EC274814770063AFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		805B34F427482DFA0063AFEA /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		805B34F72748EF0E0063AFEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		805B35062748F4830063AFEA /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				805B34FC2748F05E0063AFEA /* FirebaseAuth in Frameworks */,
+				805B34FE2748F05E0063AFEA /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +62,13 @@
 		805B34E2274814760063AFEA /* SwiftUIChat */ = {
 			isa = PBXGroup;
 			children = (
+				805B35052748F4710063AFEA /* Managers */,
+				805B35002748F0990063AFEA /* Views */,
 				805B34E3274814760063AFEA /* SwiftUIChatApp.swift */,
-				805B34E5274814760063AFEA /* RegisterationView.swift */,
 				805B34E7274814770063AFEA /* Assets.xcassets */,
 				805B34EC274814770063AFEA /* Info.plist */,
 				805B34E9274814770063AFEA /* Preview Content */,
-				805B34F427482DFA0063AFEA /* FormView.swift */,
+				805B34F72748EF0E0063AFEA /* GoogleService-Info.plist */,
 			);
 			path = SwiftUIChat;
 			sourceTree = "<group>";
@@ -70,6 +79,23 @@
 				805B34EA274814770063AFEA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		805B35002748F0990063AFEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				805B34E5274814760063AFEA /* RegisterationView.swift */,
+				805B34F427482DFA0063AFEA /* FormView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		805B35052748F4710063AFEA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				805B35062748F4830063AFEA /* FirebaseManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +114,10 @@
 			dependencies = (
 			);
 			name = SwiftUIChat;
+			packageProductDependencies = (
+				805B34FB2748F05E0063AFEA /* FirebaseAuth */,
+				805B34FD2748F05E0063AFEA /* FirebaseStorage */,
+			);
 			productName = SwiftUIChat;
 			productReference = 805B34E0274814760063AFEA /* SwiftUIChat.app */;
 			productType = "com.apple.product-type.application";
@@ -115,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 805B34D7274814760063AFEA;
+			packageReferences = (
+				805B34FA2748F05E0063AFEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 805B34E1274814760063AFEA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +164,7 @@
 			files = (
 				805B34EB274814770063AFEA /* Preview Assets.xcassets in Resources */,
 				805B34E8274814770063AFEA /* Assets.xcassets in Resources */,
+				805B34F82748EF0E0063AFEA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				805B35072748F4830063AFEA /* FirebaseManager.swift in Sources */,
 				805B34F527482DFA0063AFEA /* FormView.swift in Sources */,
 				805B34E6274814760063AFEA /* RegisterationView.swift in Sources */,
 				805B34E4274814760063AFEA /* SwiftUIChatApp.swift in Sources */,
@@ -332,6 +367,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		805B34FA2748F05E0063AFEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		805B34FB2748F05E0063AFEA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 805B34FA2748F05E0063AFEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		805B34FD2748F05E0063AFEA /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 805B34FA2748F05E0063AFEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 805B34D8274814760063AFEA /* Project object */;
 }

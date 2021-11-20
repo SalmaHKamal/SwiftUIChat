@@ -36,6 +36,7 @@ struct RegisterationView: View {
 			.background(Color(white: 0, opacity: 0.05)
 							.ignoresSafeArea())
 		}
+		.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

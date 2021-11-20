@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		805B34E4274814760063AFEA /* SwiftUIChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B34E3274814760063AFEA /* SwiftUIChatApp.swift */; };
-		805B34E6274814760063AFEA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B34E5274814760063AFEA /* ContentView.swift */; };
+		805B34E6274814760063AFEA /* RegisterationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B34E5274814760063AFEA /* RegisterationView.swift */; };
 		805B34E8274814770063AFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805B34E7274814770063AFEA /* Assets.xcassets */; };
 		805B34EB274814770063AFEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805B34EA274814770063AFEA /* Preview Assets.xcassets */; };
+		805B34F527482DFA0063AFEA /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B34F427482DFA0063AFEA /* FormView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		805B34E0274814760063AFEA /* SwiftUIChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		805B34E3274814760063AFEA /* SwiftUIChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIChatApp.swift; sourceTree = "<group>"; };
-		805B34E5274814760063AFEA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		805B34E5274814760063AFEA /* RegisterationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationView.swift; sourceTree = "<group>"; };
 		805B34E7274814770063AFEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		805B34EA274814770063AFEA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		805B34EC274814770063AFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		805B34F427482DFA0063AFEA /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +55,11 @@
 			isa = PBXGroup;
 			children = (
 				805B34E3274814760063AFEA /* SwiftUIChatApp.swift */,
-				805B34E5274814760063AFEA /* ContentView.swift */,
+				805B34E5274814760063AFEA /* RegisterationView.swift */,
 				805B34E7274814770063AFEA /* Assets.xcassets */,
 				805B34EC274814770063AFEA /* Info.plist */,
 				805B34E9274814770063AFEA /* Preview Content */,
+				805B34F427482DFA0063AFEA /* FormView.swift */,
 			);
 			path = SwiftUIChat;
 			sourceTree = "<group>";
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				805B34E6274814760063AFEA /* ContentView.swift in Sources */,
+				805B34F527482DFA0063AFEA /* FormView.swift in Sources */,
+				805B34E6274814760063AFEA /* RegisterationView.swift in Sources */,
 				805B34E4274814760063AFEA /* SwiftUIChatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
